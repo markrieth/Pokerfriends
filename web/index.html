@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+Created by Mark Rieth
 -->
 <html>
-    <head>
-        <title>Pokerfriends Web App</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>HELLO WORLD!!!!</div>
-    </body>
+  <head>
+    <title>Pokerfriends Web App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="index.js"></script>
+    <script src="globalfunctions.js"></script>
+    <script src="hash/md5.js"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div data-role="main">
+      <div class="ui-content" id="login-dialog" data-dismissible="false">
+        <form method="post" action="">
+          <div class="ui-content">
+            <h3>Login or register!</h3>
+            <label for="username"></label>
+            <input type="text" name="username" id="username" placeholder="Username">
+            <label for="password"></label>
+            <input type="password" name="password" id="password" placeholder="Password">
+            <label for="register-checkbox">I'm a new user</label>
+            <input type="checkbox" name="register-checkbox" id="register-checkbox">
+            <div class="toggle-email" style="display:none">
+              <label for="email"></label>
+              <input type="text" name="email" id="email" placeholder="Email">
+            </div>
+          </div>
+        </form>
+        <div class="login-error">
+        </div>
+        <input type="button" data-inline="false" value="Submit" id="login-submit">
+      </div> 
+      <div id="lobby-content" class="ui-content">
+        You entered the lobby!
+      </div>
+    </div>
+  </body>
 </html>
